@@ -1,11 +1,10 @@
-package co.covve.circleprogress
+package yadunut.github.com.circularprogressbar
 
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import yadunut.github.com.circularprogressbar.R
 
 /**
  * Created by yadunand on 24/12/17.
@@ -90,8 +89,8 @@ class CircleProgress : View {
 
     private fun initVariables(attribues: TypedArray) {
         finishedPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_finished_color, Color.BLUE)
-        unfinishedPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_unfinished_color, Color.WHITE)
-        innerPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_inner_color, Color.WHITE)
+        unfinishedPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_unfinished_color, Color.GRAY)
+        innerPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_inner_color, Color.GREEN)
         ringPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_ring_color, innerPaintColor)
 
         finishedPaintWidth = attribues.getDimension(R.styleable.CircleProgress_circle_finished_width, dp2px(resources, 10F))
@@ -141,8 +140,14 @@ class CircleProgress : View {
 
         canvas?.let {
             it.drawArc(ringRect, 0F, 360F, true, ringPaint)
-            it.drawArc(rect, startAngle + progressAngle, 360 - progressAngle, true, unfinishedPaint)
-            if (progressAngle != 0F) it.drawArc(rect, startAngle, progressAngle, true, finishedPaint)
+            if (unfinishedPaintWidth > finishedPaintWidth) {
+                if (progressAngle != 0F) it.drawArc(rect, startAngle, progressAngle, true, finishedPaint)
+                it.drawArc(rect, startAngle + progressAngle, 360 - progressAngle, true, unfinishedPaint)
+            } else {
+                it.drawArc(rect, startAngle + progressAngle, 360 - progressAngle, true, unfinishedPaint)
+                if (progressAngle != 0F) it.drawArc(rect, startAngle, progressAngle, true, finishedPaint)
+
+            }
             it.drawCircle(width / 2F, height / 2F, innerDiameter / 2, innerPaint)
         }
     }

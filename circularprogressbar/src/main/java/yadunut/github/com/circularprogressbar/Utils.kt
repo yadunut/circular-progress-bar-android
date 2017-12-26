@@ -1,4 +1,4 @@
-package co.covve.circleprogress
+package yadunut.github.com.circularprogressbar
 
 import android.content.res.Resources
 
