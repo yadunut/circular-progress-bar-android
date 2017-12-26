@@ -6,10 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="yadunut.github.com.circularprogressbarandroid.MainActivity">
+
     <yadunut.github.com.circularprogressbar.CircleProgress
-        app:circle_progress="25"
+        android:id="@+id/progress_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        app:circle_progress="25"/>
 
 
 </android.support.constraint.ConstraintLayout>
