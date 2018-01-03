@@ -9,8 +9,12 @@
 
     <yadunut.github.com.circularprogressbar.CircleProgress
         android:id="@+id/progress_bar"
+        app:circle_start_angle="-90"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:circle_show_text="true"
+        app:circle_text_size="40sp"
+        app:circle_text="test"
         app:circle_progress="25"/>
 
 

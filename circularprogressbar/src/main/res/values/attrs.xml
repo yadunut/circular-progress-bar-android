@@ -13,5 +13,10 @@
         <attr name="circle_progress" format="float"/>
         <attr name="circle_progress_max" format="float"/>
         <attr name="circle_start_angle" format="float"/>
+
+        <attr name="circle_show_text" format="boolean"/>
+        <attr name="circle_text" format="string"/>
+        <attr name="circle_text_color" format="color"/>
+        <attr name="circle_text_size" format="dimension"/>
     </declare-styleable>
 </resources>
