@@ -6,13 +6,13 @@ A circular / Donut Progress Bar for Android written using Kotlin
 
 Now with Rings!
 
-![Progress bar](raw.githubusercontent.com/yadunut/circular-progress-bar-android/master/demos/progressbar.gif)
+![Progress bar](demos/progressbar.gif)
 
 ## Getting Started
 No other dependencies. 
 ### Installation
 
-####Step 1: 
+**Step 1:** 
 Add this to your root build.gradle at the end of repositories
 ```groovy
 	allprojects {
@@ -22,7 +22,7 @@ Add this to your root build.gradle at the end of repositories
 		}
 	}
 ```
-####Step 2
+**Step 2**
 Add the dependency
 ```groovy
 	dependencies {
@@ -52,10 +52,6 @@ Add the dependency
         <attr name="circle_text_size" format="dimension"/>
     </declare-styleable>
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
