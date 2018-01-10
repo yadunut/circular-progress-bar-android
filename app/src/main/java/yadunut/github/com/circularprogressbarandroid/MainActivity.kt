@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         progressBar = findViewById(R.id.progress_bar)
-        Timer().schedule(Test({progressBar.progress += 1}), 1000L, 10L)
+        Timer().schedule(FunctionTask({progressBar.progress += 1}), 100L, 10L)
 
     }
 
-    class Test(var function: () -> Unit) : TimerTask() {
+    class FunctionTask(var function: () -> Unit) : TimerTask() {
 
         override fun run() {
             function()
