@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="2"
     tools:context="yadunut.github.com.circularprogressbarandroid.MainActivity">
 
     <yadunut.github.com.circularprogressbar.CircleProgress
-        android:id="@+id/progress_bar"
+        android:layout_weight="1"
+        android:id="@+id/progress_bar_1"
         app:circle_start_angle="-90"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:circle_show_text="true"
-        app:circle_text_size="40sp"
         app:circle_text="test"
         app:circle_ring_width="10dp"
         app:circle_ring_color="@android:color/black"
         app:circle_progress="25"/>
+    <yadunut.github.com.circularprogressbar.CircleProgress
+        app:circle_show_text="true"
+        android:id="@+id/progress_bar_2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

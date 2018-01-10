@@ -7,13 +7,18 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var progressBar: CircleProgress
+    lateinit var progressBar1: CircleProgress
+    lateinit var progressBar2: CircleProgress
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        progressBar = findViewById(R.id.progress_bar)
-        Timer().schedule(FunctionTask({progressBar.progress += 1}), 100L, 10L)
+        progressBar1 = findViewById(R.id.progress_bar_1)
+        progressBar2 = findViewById(R.id.progress_bar_2)
+        Timer().schedule(FunctionTask({
+            progressBar1.progress += 1
+            progressBar2.progress += 1
+        }), 100L, 10L)
 
     }
 

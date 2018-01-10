@@ -113,7 +113,7 @@ class CircleProgress : View {
     private fun initVariables(attribues: TypedArray) {
         finishedPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_finished_color, Color.BLUE)
         unfinishedPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_unfinished_color, Color.GRAY)
-        innerPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_inner_color, Color.GREEN)
+        innerPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_inner_color, Color.LTGRAY)
         ringPaintColor = attribues.getColor(R.styleable.CircleProgress_circle_ring_color, innerPaintColor)
 
         finishedPaintWidth = attribues.getDimension(R.styleable.CircleProgress_circle_finished_width, dp2px(resources, 10F))
@@ -128,8 +128,8 @@ class CircleProgress : View {
 
         if (showText) {
             text = attribues.getString(R.styleable.CircleProgress_circle_text)
-            textColor = attribues.getColor(R.styleable.CircleProgress_circle_text_color, Color.WHITE)
-            textSize = attribues.getDimension(R.styleable.CircleProgress_circle_text_size, sp2px(resources, 10F))
+            textColor = attribues.getColor(R.styleable.CircleProgress_circle_text_color, finishedPaintColor)
+            textSize = attribues.getDimension(R.styleable.CircleProgress_circle_text_size, sp2px(resources, 18F))
         }
 
 
